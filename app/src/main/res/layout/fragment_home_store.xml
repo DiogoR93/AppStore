@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rlHomeFragment"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/rlTopApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTopApps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:text="@string/top_apps"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:text="@string/more"
+        />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTopApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlTopApps"/>
+
+    <RelativeLayout
+            android:id="@+id/rlCommonApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/rvTopApps"
+            android:layout_marginTop="10dp">
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOtherApps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:text="@string/other_apps"
+        />
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="@string/more"
+        />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvApps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlCommonApps"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:text="@string/generic_error"/>
+</RelativeLayout>
